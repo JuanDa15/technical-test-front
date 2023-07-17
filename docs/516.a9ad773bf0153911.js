@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktechnical_test_front=self.webpackChunktechnical_test_front||[]).push([[516],{5516:(s,e,t)=>{t.d(e,{N:()=>n});const n={API:"https://technical-test-back.azurewebsites.net/"}}}]);
