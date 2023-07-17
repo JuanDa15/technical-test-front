@@ -4,10 +4,10 @@
       viajes.<span>COM</span>
     </a>
 
-    <ul class="links__group">
+    <ul class="links__group" *ngIf="!session.token">
       <li 
         class="links__item" 
-        routerLink="/reservation/consult-reservation"
+        routerLink="/reservation/check"
         routerLinkActive="active"
       >
         Consultar reserva
@@ -25,6 +25,21 @@
         routerLinkActive="active"
       >
         Registrar agente
+      </li>
+    </ul>
+    <ul class="links__group" *ngIf="session.token">
+      <li 
+        class="links__item" 
+        routerLink="/priv/panel"
+        routerLinkActive="active"
+      >
+        Panel
+      </li>
+      <li 
+        class="links__item" 
+        (click)="logOut()"
+      >
+        Cerrar sesión
       </li>
     </ul>
   </div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { hasSessionLoad } from 'src/app/utils/guards/session.guard';
 
 const routes: Routes = [
   {
@@ -7,15 +8,18 @@ const routes: Routes = [
     children: [
       {
         path: 'panel',
-        loadChildren: () => import('./panel/panel.module').then(m => m.PanelModule)
+        loadChildren: () => import('./panel/panel.module').then(m => m.PanelModule),
+        canMatch: [hasSessionLoad]
       },
       {
         path: 'hotel',
-        loadChildren: () => import('./hotel/hotel.module').then(m => m.HotelModule)
+        loadChildren: () => import('./hotel/hotel.module').then(m => m.HotelModule),
+        canMatch: [hasSessionLoad]
       },
       {
         path: 'room', 
-        loadChildren: () => import('./room/room.module').then(m => m.RoomModule)
+        loadChildren: () => import('./room/room.module').then(m => m.RoomModule),
+        canMatch: [hasSessionLoad]
       },
       {
         path: 'reservation',

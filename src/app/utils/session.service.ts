@@ -31,5 +31,11 @@ export class SessionService {
     this._token.set(getStorage('TOKEN'));
     this._sessionData.set(getStorage('SESSION_DATA'));
   }
-  
+
+  logOut() {
+    localStorage.removeItem('TOKEN');
+    localStorage.removeItem('SESSION_DATA');
+    this._token.set('');
+    this._sessionData.set(null);
+  }
 }
