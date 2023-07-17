@@ -1,0 +1,45 @@
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hotels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
+}
+
+.hotel {
+  border: 1px solid #37474F;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  header {
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: 0.5rem;
+
+    h3 {
+      color: var(--primary);
+    }
+  }
+
+  main {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  &-btn {
+    color: var(--text);
+    transition: color 0.3s ease;
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}

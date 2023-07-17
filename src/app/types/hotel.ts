@@ -9,6 +9,16 @@ export interface HotelAdminList {
   availableRooms: number
 }
 
+export interface HotelPublic {
+  _id:            string;
+  name:           string;
+  location:       string;
+  address:        string;
+  rooms:          string[];
+  availableRooms: number;
+}
+
+
 export interface HotelDetailedAdmin {
   _id:       string;
   name:      string;

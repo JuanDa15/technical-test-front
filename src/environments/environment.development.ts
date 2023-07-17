@@ -1,3 +1,3 @@
 export const environment = {
-  API: "https://technical-test-back.azurewebsites.net/"
+  API: "http://localhost:3000/"
 };
