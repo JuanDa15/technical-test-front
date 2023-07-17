@@ -132,7 +132,8 @@ export class CCityInputComponent implements ControlValueAccessor, Validator {
           this.isValid = false;
         }
         if (val.length === 0) {
-          this.isValid = false;
+          this.onChange('')
+          this.isValid = true;
         }
         previusLength = val.length;
       }

@@ -2,7 +2,17 @@
   <h1>
     Lista de Hoteles
   </h1>
-
+  <form class="filters-form" [formGroup]="form" (ngSubmit)="search()">
+    <div class="filters">
+      <c-city-input label="Ciudad de destino*" formControlName="location"/>
+      <c-date-input label="Fecha de entrada*" formControlName="checkIn" type="date"/>
+      <c-date-input label="Fecha de salida*" formControlName="checkOut" type="date"/>
+      <c-number-input label="Cantidad de personas*" formControlName="travelers"/>
+    </div>
+    <button type="submit" class="primary-button">
+      Buscar
+    </button>
+  </form>
   <section class="hotels">
     <hotel-card  *ngFor="let item of hotelService.hotels$()" [hotel]="item"/>
   </section>

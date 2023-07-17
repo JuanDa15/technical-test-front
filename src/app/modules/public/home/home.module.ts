@@ -7,6 +7,8 @@ import { HotelModule } from '../hotel/hotel.module';
 import { ListComponent } from './components/list/list.component';
 import { TooltipModule } from 'primeng/tooltip';
 import { HotelCardComponent } from './components/hotel-card/hotel-card.component';
+import { SharedModule } from '../../shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { HotelCardComponent } from './components/hotel-card/hotel-card.component
     CommonModule,
     HomeRoutingModule,
     HotelModule,
-    TooltipModule
+    TooltipModule,
+    SharedModule,
+    ReactiveFormsModule
   ],
   exports: [
     HomeComponent

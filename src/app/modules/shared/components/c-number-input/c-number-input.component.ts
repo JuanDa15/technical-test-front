@@ -115,11 +115,11 @@ export class CNumberInputComponent implements ControlValueAccessor, Validator {
     private _subscribeToValueChanges(): void {
       const sub = this.form.valueChanges.subscribe({
         next: (val: number) => {
-          if (val !== null) {
-            this.onValidatorChange();
-            this.onTouch();
-            this.onChange(val.toString());
-          }
+         
+          this.onValidatorChange();
+          this.onTouch();
+          this.onChange((val) ? val.toString() : '');
+          
         }
       });
       this._subscriptions.push(sub);
