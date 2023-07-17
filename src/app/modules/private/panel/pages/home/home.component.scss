@@ -1,0 +1,27 @@
+.content-container {
+  width: 100%;
+  display: flex !important;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.panel-item {
+  flex: 1 1 45%;
+  display: block;
+  border: 1px solid #37474F;
+  border-left: 4px solid var(--primary);
+  color: var(--text);
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: background-color 0.3s ease-in;
+
+  &:hover {
+    background-color: #455A64;
+  }
+}
