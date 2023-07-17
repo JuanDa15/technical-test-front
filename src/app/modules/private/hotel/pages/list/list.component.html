@@ -5,9 +5,9 @@
     <a routerLink="/priv/hotel/create">Crear hotel</a>
   </div>
   <ng-container *ngIf="!loading(); else loader">
-    <ng-container *ngIf="hotelService.hotels.length > 0; else noData">
+    <ng-container *ngIf="hotelService.hotels().length > 0; else noData">
       <section class="hotels__list">
-        <article class="hotels__list-item" *ngFor="let hotel of hotelService.hotels">
+        <article class="hotels__list-item" *ngFor="let hotel of hotelService.hotels()">
           <header>
             <h2>{{hotel.name | titlecase}}</h2>
             <small>{{hotel.email}}</small>
