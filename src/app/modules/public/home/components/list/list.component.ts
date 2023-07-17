@@ -8,11 +8,7 @@ import { HotelService } from '../../services/hotel.service';
 })
 export class ListComponent implements OnInit{
   public hotelService = inject(HotelService)
-  public roomMapping = {
-    '=0': '# habitaciones disponibles.', 
-    '=1': '# habitación disponible.', 
-    'other': '# habitaciones disponibles.',
-  }
+
   ngOnInit(): void {
     this.hotelService.getHotels();
   }
