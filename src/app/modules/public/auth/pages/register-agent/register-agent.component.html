@@ -1,0 +1,19 @@
+<section class="content-container">
+  <h1>Registrarse como agente</h1>
+
+  <div class="form-wrapper">
+    <div class="img-wrapper">
+      <img src="assets/img/auth.svg" width="350"/>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="save()">
+      <c-input label="Nombre*" formControlName="name" name="name"/>
+      <c-input label="Apellidos*" formControlName="lastName" name="lastName"/>
+      <c-email-input label="Correo electrónico*" formControlName="email" name="email"/>
+      <c-password-input label="Contraseña*" formControlName="password" name="password"/>
+      <c-password-input label="Confirmar contraseña*" formControlName="confirmPassword" name="confirmPassword"/>
+      <button type="submit" class="primary-button">
+        Crear agente
+      </button>
+    </form>
+  </div>
+</section>
