@@ -1,0 +1,22 @@
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
+}
+
+.traveler-form {
+  padding: 1rem;
+  border: 1px solid #37474F;
+  border-radius: 0.5rem;
+}
+
+.emergency {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #37474F;
+  border-radius: 0.5rem;
+  h4 {
+    margin-bottom: 1rem;
+  }
+}

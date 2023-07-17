@@ -1,0 +1,35 @@
+<section class="content-container">
+  <h1>Realizar reserva</h1>
+
+  <form [formGroup]="form" (ngSubmit)="save()" class="main-form">
+    <div class="grid">
+      <c-date-input type="date" formControlName="startDate" label="Desde*"/>
+      <c-date-input type="date" formControlName="endDate" label="Hasta*"/>
+    </div>
+    <form formGroupName="emergencyContact" class="emergency">
+      <h4>Contacto de emergencia</h4>
+      <div class="grid">
+        <c-input formControlName="name" label="Nombre*"/>
+        <c-number-input formControlName="phone" label="Teléfono"/>
+      </div>
+    </form>
+  
+    <div formArrayName="travelers" class="travelers">
+      <h3>
+        Pasajeros      
+        <button class="primary-button" type="button" (click)="createTravelerForm()">
+          Agregar pasajero
+        </button>
+      </h3>
+      <div *ngFor="let item of travelersArr.controls;let i = index;let first = first">
+       <traveler-form 
+        [form]="item" 
+        [isFirst]="first"
+        (onRemove)="travelersArr.removeAt(i)"
+        />
+      </div>
+    </div>
+
+    <button type="submit" class="primary-button">Reservar</button>
+  </form>
+</section>
