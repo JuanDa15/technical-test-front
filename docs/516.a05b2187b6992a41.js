@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktechnical_test_front=self.webpackChunktechnical_test_front||[]).push([[516],{5516:(c,t,e)=>{e.d(t,{N:()=>n});const n={API:"http://localhost:3000/"}}}]);
