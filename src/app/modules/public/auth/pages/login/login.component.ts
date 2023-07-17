@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
 import { SessionService } from 'src/app/utils/session.service';
 import { NotificationService } from 'src/app/utils/notification.service';
+import { LoginBody } from 'src/app/types/auth';
 
 @Component({
   selector: 'app-login',
@@ -32,7 +33,8 @@ export class LoginComponent implements OnInit {
       this.form.markAllAsTouched();
       return;
     }
-    this.loginService.logIn(this.form.value).subscribe({
+    const body = structuredClone(this.form.value) as LoginBody;
+    this.loginService.logIn(body).subscribe({
       next: (val) => {
         this.notifications.create({
           severity: 'success',
