@@ -1,0 +1,18 @@
+<section class="content-container">
+  <h1>Hotel {{hotelDetailService.hotel$()?.name}}</h1>
+  <h3>{{hotelDetailService.hotel$()?.location}}, {{hotelDetailService.hotel$()?.address}}</h3>
+  <p>{{hotelDetailService.hotel$()?.email}}</p>
+
+  <div class="indicators">
+    <p><span class="not-reserved"></span>Disponible</p>
+    <p><span class="reserved"></span>Ocupado</p>
+    <p><span class="deactivated"></span>Deshabilitada</p>
+  </div>
+  <div class="rooms">
+   <room 
+    *ngFor="let item of hotelDetailService.hotel$()?.rooms" 
+    [room]="item"
+    [hotelId]="hotelDetailService.hotel$()?._id!"
+    />
+  </div>
+</section>

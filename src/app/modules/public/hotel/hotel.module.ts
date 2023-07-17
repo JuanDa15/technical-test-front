@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { HotelRoutingModule } from './hotel-routing.module';
 import { ListComponent } from '../home/components/list/list.component';
 import { DetailComponent } from './pages/detail/detail.component';
+import { RoomComponent } from './components/room/room.component';
 
 
 
 @NgModule({
   declarations: [
-    DetailComponent
+    DetailComponent,
+    RoomComponent
   ],
   imports: [
     CommonModule,

@@ -36,6 +36,9 @@ export interface Room {
   location: Location;
   active:   boolean;
   reserved: boolean;
+  type?: string;
+  baseCost?: string;
+  taxes?: string;
 }
 
 export interface Location {

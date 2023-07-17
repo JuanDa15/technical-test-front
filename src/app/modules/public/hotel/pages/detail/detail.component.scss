@@ -1,0 +1,37 @@
+.rooms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.reserved {
+  background-color: var(--error);
+}
+
+.not-reserved {
+  background-color: var(--success);
+}
+
+.deactivated {
+  background-color: #78909c;
+}
+
+.indicators {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+  p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    span {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border-radius: 0.2rem;
+    }
+  }
+}
