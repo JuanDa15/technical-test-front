@@ -1,0 +1,24 @@
+<div
+  class="input-container"
+  [class.error]="(controlInstance !== null) ? formHelper.checkControlErrors(controlInstance) : false"
+>
+	<label
+    class="input-label"
+    [attr.for]="id ? id : null"
+  >{{label}}</label>
+	<input
+    type="email"
+    class="input"
+    name="{{name ? name : null}}"
+    [attr.id]="id ? id : null"
+    (blur)="markAsTouch()"
+    [formControl]="form"
+    NoWhiteSpaces
+    autocomplete="off"
+  />
+  <p
+    class="input-error"
+    *ngIf="(controlInstance !== null) ? formHelper.checkControlErrors(controlInstance) : false">
+    {{ formHelper.getControlErrors(controlInstance!)}}
+  </p>
+</div>
