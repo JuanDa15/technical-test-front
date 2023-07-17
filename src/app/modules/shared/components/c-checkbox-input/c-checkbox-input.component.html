@@ -1,0 +1,21 @@
+
+<div
+  class="input-container"
+  [class.error]="controlInstance ? formHelper.checkControlErrors(controlInstance) : false"
+>
+  <p class="input-label">{{label}}</p>
+  <input
+    class="switch"
+    type="checkbox"
+    [id]="id"
+    name="{{name ? name : null}}"
+    autofocus="{{autofocus ? autofocus : null}}"
+    (blur)="markAsTouch()"
+    (change)="markAsTouch()"
+    [formControl]="form"
+  />
+  <label class="switch-label" [for]="id"></label>
+  <p class="input-error" *ngIf="(controlInstance) ?  formHelper.checkControlErrors(controlInstance) : false">
+    {{(controlInstance) ? formHelper.getControlErrors(controlInstance) : ''}}
+  </p>
+</div>

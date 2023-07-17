@@ -3,3 +3,8 @@ export interface ServerResponse<T> {
   data: T,
   token?: string
 }
+
+export interface ListDataResponse<T> {
+  data: T[],
+  count: number;
+}
