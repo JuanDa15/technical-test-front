@@ -42,10 +42,22 @@ body {
   border: none;
   border-radius: 0.3rem;
   color: var(--text);
-  padding: 0.4rem 0;
+  padding: 0.4rem 0.3rem;
   transition: background-color 0.3s ease;
-
+  cursor: pointer;
   &:hover {
     background-color: #d85933;
+  }
+}
+.danger-button {
+  background-color: var(--error);
+  border: none;
+  border-radius: 0.3rem;
+  color: var(--text);
+  padding: 0.4rem 0.3rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: #C62828;
   }
 }

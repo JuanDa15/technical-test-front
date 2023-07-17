@@ -1,0 +1,21 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.controls-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
+}
+.loader-wrapper {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.actions {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
