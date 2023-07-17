@@ -6,11 +6,13 @@ import { HomeComponent } from './home.component';
 import { HotelModule } from '../hotel/hotel.module';
 import { ListComponent } from './components/list/list.component';
 import { TooltipModule } from 'primeng/tooltip';
+import { HotelCardComponent } from './components/hotel-card/hotel-card.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    ListComponent
+    ListComponent,
+    HotelCardComponent
   ],
   imports: [
     CommonModule,
