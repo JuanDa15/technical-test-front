@@ -33,7 +33,6 @@ export class ListComponent implements OnInit{
       return;
     }
     
-    console.log(this.form.value)
     this.router.navigate(['/'], {
       queryParams: {
         ...this._getParams({...this.form.value})
