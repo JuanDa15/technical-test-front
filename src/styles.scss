@@ -1,1 +1,51 @@
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --bg: #263238;
+  --text: #fff;
+  --primary: #D84315;
+  --error: #B71C1C;
+  --success: #388E3C;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.content-container {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.primary-button {
+  background-color: var(--primary);
+  border: none;
+  border-radius: 0.3rem;
+  color: var(--text);
+  padding: 0.4rem 0;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #d85933;
+  }
+}
