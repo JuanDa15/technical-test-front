@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "undefined/subscriptions/c26e3f2d-a668-46fc-901a-cc67342c6d17/resourceGroups/technical-test-rg/providers/Microsoft.Web/sites/technical-test-front",
+  "appService.deploySubpath": "."
+}

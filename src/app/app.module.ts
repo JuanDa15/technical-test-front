@@ -8,6 +8,9 @@ import { SharedModule } from './modules/shared/shared.module';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import localeEsCo from '@angular/common/locales/es-CO';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localeEsCo, 'es-CO');
 
 @NgModule({
   declarations: [
