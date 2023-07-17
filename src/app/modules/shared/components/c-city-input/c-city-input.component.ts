@@ -3,7 +3,7 @@ import { AbstractControl, ControlValueAccessor, FormBuilder, FormControl, NG_VAL
 import { Subscription } from 'rxjs';
 import { Regions } from 'src/app/types/regions';
 import { FormHelperService } from 'src/app/utils/form-helper.service';
-import { regions } from 'src/assets/json/colombia-country.js';
+import { regions } from 'src/assets/json/colombia-country';
 
 export interface CityInputItem {
   city: string;
