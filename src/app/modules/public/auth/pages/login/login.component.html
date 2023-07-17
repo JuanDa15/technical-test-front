@@ -1,0 +1,16 @@
+<section class="content-container">
+  <h1>Iniciar sesión</h1>
+
+  <div class="form-wrapper">
+    <div class="img-wrapper">
+      <img src="assets/img/login.svg" width="350"/>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="logIn()">
+      <c-email-input label="Correo electrónico*" formControlName="email" name="email"/>
+      <c-password-input label="Contraseña*" formControlName="password" name="password"/>
+      <button type="submit" class="primary-button">
+        Iniciar sesión
+      </button>
+    </form>
+  </div>
+</section>
